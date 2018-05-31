@@ -21,11 +21,15 @@ package org.transmartproject.db.user
 
 import grails.transaction.Transactional
 import org.hibernate.Query
+import org.springframework.context.annotation.Primary
+import org.springframework.stereotype.Component
 import org.transmartproject.core.exceptions.NoSuchResourceException
 import org.transmartproject.core.users.UsersResource
 
 import java.security.Principal
 
+@Component
+@Primary
 class UsersResourceService implements UsersResource {
 
     @Transactional(readOnly = true)
